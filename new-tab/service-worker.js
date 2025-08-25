@@ -55,7 +55,7 @@ self.addEventListener("fetch", (event) => {
   // page is found and returned instantly. As a workaround, we just return the hardcoded contents of
   // index.html without checking the cache.
   const url = new URL(event.request.url);
-  if (url.pathname === "/new_tab_page/index.html" || url.pathname == "/new_tab_page/") {
+  if (url.pathname === "/new-tab/index.html" || url.pathname == "/new-tab/") {
     event.respondWith(
       new Response(pageHtml, {
         headers: { "Content-Type": "text/html; charset=utf-8" },
